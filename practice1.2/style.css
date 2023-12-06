@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #ffffff;
+  font-family: 'PT Sans', sans-serif;
+}
+
+/* Button Designing */
+.login_button {
+  position: relative;
+  background: #444;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: none;
+  letter-spacing: 0.1rem;
+  font-size: 1rem;
+  padding: 1rem 3rem;
+  transition: 0.2s;
+}
+
+.login_button:hover {
+  letter-spacing: 0.2rem;
+  padding: 1.1rem 3.1rem;
+  background: var(--clr);
+  color: var(--clr);
+  box-shadow: 0 0 35px var(--clr); 
+  animation: box 3s infinite;
+}
+
+.login_button::before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: #272822;
+}
+
+.login_button span {
+  position: relative;
+  z-index: 1;
+}
+  
+/* Model Designing */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0); 
+  transition: 200ms ease-in-out;
+  border: 2px solid rgba(255, 255, 255, 1);
+  border-radius: 10px;
+  z-index: 10;
+  background-color: white;
+  width: 790px;
+  min-width: 805px;
+  max-width: 90%;
+  height:541px;
+  max-width: 90%;
+  display: flex;
+  flex-direction: row;
+  }
+  
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+  }
+  
+.close-button {
+  width: 24px;
+  height: 24px;
+  padding-top: 24px;
+  padding-right: 24px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+  }
+
+.modal-header {
+  height:539px;
+  width:330px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  }
+  
+.modal-header img{
+  width:330px;
+  height:539px;
+}
+  
+.modal-body {
+  padding: 24px 31px;
+  }
+
+.modal_body_heading {
+  width:auto;
+  height: 56px;
+  padding-left: 55.5px;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0px;
+  text-align: center;
+}
+
+.modal_body_heading span{
+  color: #DF720C;
+}
+
+.modal-body-pointer{
+  display: flex;
+  gap: 10px;
+  padding: 19px 20px;
+}
+
+.modal-body-pointer img{
+  float: left;
+  width: 22px;
+  height: 21.99px;
+}
+  
+.modal-body-pointer h3{
+  font-family: 'PT Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align:left;
+  color: rgba(47, 29, 44, 1);
+}
+
+.modal_body_pointer p{
+  font-family: 'PT Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0px;
+  text-align: left;
+  color:rgba(53, 53, 57, 1);
+}
+
+.model-button{
+  width: 100%;
+  text-align: center;
+}
+.model-button button{
+  width: 279px;
+  height: 47px;
+  border-radius: 8px;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23px;
+  letter-spacing: 0em;
+  text-align: center;
+  background-color: #DF720C;
+  color: #FFFFFF; 
+  border: 1px #FFFFFF solid;
+  cursor: pointer;
+}
+
+.model-bottom-text{
+  text-align: center;
+  padding-top: 32px;
+  color: rgba(47, 29, 44, 1);
+  font-family: 'PT Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 0em;
+}
+
+.model-bottom-text a{
+  color: rgba(47, 29, 44, 0.8);
+  font-family: 'Open Sans';
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+/* Background Overlay */
+#overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events: none;
+  }
+  
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+
+@media screen and (max-width:405px){
+  body{
+    min-height: 768px;
+    width: 375px;
+    height: 768px;
+  }
+  
+  .modal{
+    flex-direction: column;
+    min-width:329px;
+    height:660px;
+    border: 2px solid rgba(255, 255, 255, 1);
+  }
+
+  .modal-header{
+    width: 327px;
+    height: 95.92px;
+  }
+
+  #modal-header-image{
+    content: url(background-phone.png);
+  }
+
+  .modal-header img{
+    width: 98%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .close-button{
+    position: absolute;
+    width: 24px;
+    height: 24.77px;
+    top: -10px;
+    left: 300px;
+  }
+
+  .modal-body {
+    padding: 0px;
+  }
+
+  .modal_body_heading {
+    padding-top: 22.13px;
+    padding-left: 24px;
+  }
+
+  .modal-body-pointer{
+    padding: 24px 24px;
+  }
+}
+
+@media screen and (max-height:744px){
+  .modal{
+    min-height:682px;
+  }
+
+}

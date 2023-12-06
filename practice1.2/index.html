@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Modal</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link href="style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+    <button data-modal-target="#modal" class="login_button" style="--clr:#EA00FF"><span>Click Here</span></button>
+
+    <div class="modal" id="modal">       
+        
+        <div class="modal-header" id="modal-header-image">
+            <img src="background.png">
+        </div>
+
+        <div class="modal-body">
+                <div class="modal_body_heading">
+                    <h5>Join mable for <span>FREE</span> to view support workers profiles</h5>
+                </div>
+
+                <div class="modal-body-pointer">
+                    <img src="Linecheckmark.png">
+                    <div>
+                        <h3>Peace of mind</h3>
+                        <p>Each independent support worker has been verified with both police checks and references.</p>
+                    </div>
+                </div>
+                
+                <div class="modal-body-pointer" style="padding-top: 8px;">
+                    <img src="Linecheckmark.png">
+                    <div>
+                        <h3>Better value support</h3>
+                        <p>Because we’re online, our costs are lower. We pass the savings onto you!</p>
+                    </div>
+                </div>
+            
+                <div class="modal-body-pointer" style="padding-top: 8px;">
+                    <img src="Linecheckmark.png">
+                    <div>
+                        <h3>Freedom of choice</h3>
+                        <p>Enjoy the freedom and flexibility that comes with having a direct relationship with your support team.</p>
+                    </div>
+                </div>
+                <div class="model-button">
+                    <button data-close-button >Lets get started</button>
+                </div>
+            <div class="model-bottom-text">
+                <p>Already have an account?
+                    <a href="https://www.google.com/"><u><b>Login here</b></u></a>
+                </p>
+            </div>
+        </div>
+
+        <button data-close-button class="close-button">
+            &times;
+        </button>
+
+    </div>
+
+    <div id="overlay"></div>
+
+</body>
+</html>
