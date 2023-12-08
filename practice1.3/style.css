@@ -1,0 +1,316 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0;
+    line-height: 1;
+}
+
+.news-top{
+    background-color: #cc0000;
+    width: 100%;
+    text-align: center;
+}
+
+.news-top-text{
+    color: white;
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: 600;
+    width: 80%;
+    padding: 10px 0px;
+    margin: auto;
+    text-align: center;
+    height: fit-content;
+}
+
+.head-scroll{
+    width: 100%;
+    float: left;
+    background:#fff;
+    position: sticky;;
+}
+
+.head-top{
+    margin: 0 auto;
+    position: relative;
+    width:1300px;
+    overflow: hidden;
+    clear: both;
+    padding: 0 0 20px;
+}
+
+.head-top-item1,.head-top-item2,.head-top-item3,.head-top-item4,.bucket-wrapper{
+    display: block;
+    float: left;
+}
+
+.head-top-item1 img{
+    width: 200px;
+    margin: 18px 0;
+
+}
+
+.head-top-item2{
+    width: 36%;
+    margin: 26px 1.4% 0 2%;
+    border: solid 1px #ddd;
+    padding: 4px 0px;
+    border-radius: 10px;
+    box-shadow: 0 0 6px #ddd;
+}
+
+.head-top-item2 input{
+    margin-left: 3px;
+    height: 28px;
+    width: 98%;
+    font-size: 13px;
+    line-height: 13px;
+    color: #444;
+    padding-left: 3px;
+}
+
+#search {
+    display: block;
+    float: left;
+    width: 96%;
+    height: 48px;
+    margin: 2px 0 0 2%;
+    border: 0;
+    padding: 3px 1px 5px;
+    background: #fff;
+}
+
+.item3-wrapper{
+    float: left;
+    width:fit-content;
+    margin: 32px 0 0;
+}
+
+.text-wrapper{
+    float: right;
+    text-align: left;
+    width: 70%;
+}
+
+.icon-star{
+    display: block;
+    float: left;
+    width: 30%;
+    font-size: 28px;
+    padding: 4px 0 2px;
+}
+
+.item3-top-text{
+    width: 100%;
+    font-size:16px;
+    font-weight: 600;
+    color: #000;
+    margin: 0 0 6px;
+    float: left;
+    text-align: left;
+}
+.item3-bottom-text{
+    font-size: 100%;
+    vertical-align: baseline;
+    background: 0 0;
+    margin: 0;
+    padding: 0;
+    color: #666;
+    text-decoration: none;
+    float: left;
+    text-align: left;
+    width: 100%;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1;
+}
+
+.head-top-item4{
+    width: 170px;
+    margin: 32px 0 0 0;
+}
+
+.icon-user{
+    display: block;
+    float: left;
+    padding: 4px 0 0;
+    font-size: 28px;
+    width: 30%;
+}
+
+.item4-top-text{
+    width: 100%;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+    margin: 0 0 6px;
+}
+
+.item4-bottom-text{
+    float: left;
+    text-align: left;
+    width: 100%;
+    font-size: 13px;
+    font-weight: 300;
+    color: #666;
+}
+
+.bucketwrapper{
+    float: left;
+    width: 190px;
+    height: 80px;
+    margin: 20px 4px 0 0;
+}
+.top-bucket{
+    vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+}
+
+.top-bucket img{
+    width: 60px;
+    height: 52px;
+    margin: 20px 4px 0 0;
+}
+
+.basket-text{
+    float: right;
+    text-align: right;
+    width: 120px;
+    padding: 28px 0 0;
+}
+
+.head{
+    float: left;
+    text-align: left;
+    width: 100%;
+    font-size:16px;
+    font-weight: 600;
+    color: #000;
+    padding: 0 0 6px;
+}
+
+.tail{
+    font-size: 13px;
+    font-weight: 300;
+    padding: 0 0 10px;
+    color: #555;
+    text-align: left;
+    width: 100%;
+    float: right;
+}
+
+.menu-wrapper,.menu,.menu li ul{
+    width: 100%;
+    margin: 0;
+}
+
+.menu-wrapper{
+    float:left;
+    height: 48px;
+    background: #6b5f53;
+    z-index: 100;
+    position: relative;
+    text-align: center;
+}
+
+.menu{
+    float: left;
+    height: 46px;
+    padding: 0;
+    text-align: center;
+}
+
+.menu li{
+    list-style: none;
+    float: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 0 auto;
+    vertical-align: text-top !important;
+}
+
+.xmas,.new{
+    background: #2d4f1a;
+}
+
+.topsale{
+    background: #c00;
+}
+
+.menu li a{
+    display: inline-block;
+    padding: 17px 18px 16px;
+    color: #fff;
+    font-size: 15px;
+    text-decoration: none;
+    position: relative;
+    font-weight: 700;
+}
+
+a{
+    vertical-align: baseline;
+    background: 0 0;
+    margin: 0;
+}
+
+.usp-wrapper{
+    float: left;
+    width: 100%;
+    padding: 6px 0 14px;
+}
+
+.central-wrapper{
+    margin: 0 auto;
+    width: 1300px;
+    position: relative;
+    clear: both;
+    padding: 0 0 20px;
+}
+
+.usp-box,.usp-text{
+    padding: 0;
+    color: #000;
+    font-weight: 700;
+}
+.usp-box{
+    float: left;
+    width: 33.2%;
+}
+
+.usp-text{
+    float: left;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.usp-icon{
+    height: 30px;
+    width: auto;
+    position: relative;
+    top: 8px;
+    margin: 0 10px 0 0;
+}
+
+.central-wrapper h1{
+    display: block;
+    font-size: 38px;
+    border: 0;
+    font-weight: 400;
+    letter-spacing: 3px;
+    margin: 20px 0 30px;
+    text-align: center;
+    color: #222;
+    padding: 20px 0 10px;
+    width: 100%;
+    margin-block-start: 0.67rem;
+    margin-block-end: 0.67rem;
+    
+}
+
+
+
+
