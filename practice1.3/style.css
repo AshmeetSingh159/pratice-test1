@@ -1,9 +1,9 @@
 *{
     padding: 0px;
     margin: 0px;
-    font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 0;
     line-height: 1;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .news-top{
@@ -31,7 +31,14 @@
     position: sticky;;
 }
 
+.head-top-menu{
+    /*display:none;*/
+    
+}
+
+
 .head-top{
+    display: static;
     margin: 0 auto;
     position: relative;
     width:1300px;
@@ -311,6 +318,125 @@ a{
     
 }
 
+.cs{
+    padding: 50px 0 39px 0;
+    width: 100%;
+    color: #000;
+    text-align: center;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
 
+.table-wrapper{
+    display: block;
+    width: 100%;
+    border: 12px solid rgba(107, 95, 83,0.2);
+    background-clip: padding-box;
+}
 
+.context-table{
+    width: 100%;
+    margin: 0;
+    height: 321px;
+    flex-shrink: 0;
+}
+
+.heading{
+    background-color: #6A5E52;
+    padding-left: 15px;
+}
+
+.table-heading{
+    color: #FFF;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: left;
+}
+
+.table-heading span{
+    color: #FFF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: left; 
+}
+
+.row-1 ,.row-2{
+    color: #000;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.row-1 td{
+    border-bottom: 1px solid rgba(214, 207, 201, 1);
+    padding: 20px 0 20px 15px;
+}
+
+.row-2 td{
+    padding: 15px 0 20px 15px;
+}
+
+.row-2 i{
+    color: #000;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.row-2 span{
+    color: #000;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.delivery-details{
+    padding: 54px 0 80px 0;
+    width: 100%;
+    text-align: center;
+}
+
+.paragraph-1 , .paragraph-2,.paragraph-3,.paragraph-4{
+    position: relative;
+    width: 900px;
+    height: auto;
+    margin: 0 auto;
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; 
+    text-align: left;
+}
+
+.paragraph-2,.paragraph-3,.paragraph-4{
+    padding-top: 40px;
+}
+
+.delivery-details h3{
+    color: #000;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+@media screen and max-width(400px){
+    .head-top{
+        display: none;
+    }
+
+    .head-top-menu{
+        display: static;
+    }
+}
 
