@@ -1,0 +1,24 @@
+<html?>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<title>Woolwoths Onlne</title>
+  <style>
+    .meganav-col-4
+      	{
+      		grid-column: 8;
+      		border-left: 2px solid #e5e5e5;
+      	}
+    .category-col3{
+      	grid-column: 3/8;
+      }
+  </style>
+<body>
+    <script>
+        const divElements = document.querySelectorAll('.main-nav__list-new.main-col.header-category.shop-by-departement');
+        divElements.forEach(div => {const ulElements = div.querySelectorAll('.meganav-col');
+              if (ulElements.length >= 3) {ulElements[2].id = 'category-col3';}
+        });
+    </script>
+</body>
