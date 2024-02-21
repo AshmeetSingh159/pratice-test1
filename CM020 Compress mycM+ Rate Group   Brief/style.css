@@ -1,0 +1,13 @@
+.membership-menu{
+	width:100%;
+	height: auto;
+	padding: 15px 10px 10px 10px;
+}
+
+#View-Membership{
+	border: none;
+	line-height: 2;
+	font-size: inherit;
+	font-weight: 600;
+	background-color: white;
+}
