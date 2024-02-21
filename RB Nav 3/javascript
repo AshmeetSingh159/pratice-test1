@@ -1,0 +1,50 @@
+console.log("start");
+
+setTimeout(function() {
+    console.log("starting");
+    var firstAnchorTag = document.querySelector('ul.Navigation li:first-child a');
+    if (!firstAnchorTag) {
+        console.log("Anchor tag not found.");
+        return;
+    }
+
+    var observer = new MutationObserver(function(mutationsList, observer) {
+        mutationsList.forEach(function(mutation) {
+            if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+                if (firstAnchorTag.classList.contains('active')) {
+                    handleDynamicInsertion();
+                }
+            }
+        });
+    });
+    observer.observe(firstAnchorTag, { attributes: true });
+}, 1000); 
+
+console.log("working");
+
+function handleDynamicInsertion() {
+    var newDiv = document.createElement('div');
+    newDiv.className = 'Category';
+    newDiv.innerHTML = '<div class="New_Arrivals"><div class="image-container"><div class="content"><img src="https://optiabtests.s3.eu-west-2.amazonaws.com/AWA/rnb/218x218_Portland_Tan.jpg" alt="Image 1"><img src="https://optiabtests.s3.eu-west-2.amazonaws.com/AWA/rnb/218x218_Elevate_Tan.jpg" alt="Image 2"><div class="text text1"><p>New Arrival</p></div><div class="text text2"><p>Be Inspired</p></div></div></div></div>';
+    
+    var parentDiv = document.querySelector('.Menu__Categories');
+    if (parentDiv) {
+        parentDiv.appendChild(newDiv);
+        animateElements();
+    } else {
+        console.log('Parent div not found.');
+    }
+}
+
+function animateElements() {
+    var image1 = document.querySelector('.image-container img:nth-child(1)');
+    var image2 = document.querySelector('.image-container img:nth-child(2)');
+    var text1 = document.querySelector('.text.text1');
+    var text2 = document.querySelector('.text.text2');
+    image1.style.animation = 'fade 10s infinite';
+    image2.style.animation = 'fade 10s infinite';
+    text1.style.animation = 'text-fade 10s infinite';
+    text2.style.animation = 'text-fade 10s infinite';
+}
+
+console.log("end");
