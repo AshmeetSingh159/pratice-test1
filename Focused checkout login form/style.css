@@ -1,0 +1,115 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:auto;
+  background-color: #f0f0f0;
+}
+.card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 600px;
+}
+.card h1 {
+  padding-left:15px;
+  font-size: 24px;
+  text-align: left;
+}
+label, input[type="radio"]{
+  font-weight: bold;
+  cursor: pointer;
+}
+input[type="radio"]:hover{
+  cursor: pointer;
+}
+.form-signup,.guest-checkout,#login-form{
+  border: #1f1f1f19 solid 1px;
+  padding: 20px 0px 8px 18px;
+}
+.signup-benefits ul{
+  list-style-type: none;
+}
+.signup-benefits p,.guest-checkout p,#login-form h2{
+  padding-left: 20px;
+}
+ul li::before{
+  content : '\2714';
+  margin-right: 5px;
+}
+#login-form{
+  padding: 5px 10px 10px 10px;
+  margin-right: 15px;
+  margin-bottom: 25px;
+}
+#login-form button{
+  width:95%;
+  height: 35px;
+  display:block;
+  margin: 10px;
+  border-radius: 7px;
+  box-shadow:0 4px 6px rgba(0, 0, 0, 0.086);
+}
+.Google-login{
+  background-color: white;
+  border:#1f1f1f19 solid 1px;
+}
+.Facebook-login,.Twitter-login,.Apple-login,.Email-signup{
+  color: white;
+  border: none;
+}
+.Facebook-login{
+  background-color: #316FF6;
+}
+.Twitter-login{
+  background-color:#1DA1F2;
+}
+.Apple-login{
+  background-color: black;
+}
+.Email-signup{
+  background-color:red;
+}
+
+#checkout-form{
+  width: 95%;
+  height: auto;
+}
+
+#checkout-form input{
+  width: 97%;
+  margin: 5px;
+  padding: 0px 3px 0px 8px;
+  line-height: 2;
+  font-family:inherit;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+#checkout-btn{
+  width: 100%;
+  margin:5px;
+  padding: 15px 32px;
+  background-color: #0071b8;
+  color: #ffffff;
+  line-height: 20px;
+  font-size: 10px;
+  font-weight: 600;
+  font-family:"Gotham SSm A","Gotham SSm B","Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;
+  text-transform:uppercase;
+  cursor:pointer;
+  border: 0;
+  border-radius: 32px;
+}
+
+.checkout-wrapper{
+  height: auto;
+  width: 100%;
+}

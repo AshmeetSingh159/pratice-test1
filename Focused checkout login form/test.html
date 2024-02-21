@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Checkout</title>
+    <link  rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/bfff426443.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>Welcome to Secure Checkout</h1>
+            <div class="form-signup">
+              <div class="form-signup-wrappper">
+                <input type="radio" name="login" id ="signup" onclick="showLoginForm()"/>
+                <label for="signup">Sign in or register with Canon ID</label>
+              </div>
+              <div class="signup-benefits">
+                <!--signup  benefits go here-->
+                <p>Register an acoount to enjoy the following benefits:</p>
+                <ul>
+                  <li>Faster checkout with your saved address</li>
+                  <li>Tailored promotions and offers, including a birthday treat</li>
+                  <li>Join Canon Club and gain points for purchasing products</li>
+                </ul>
+                <div id="login-form" style="display:none;">
+                  <!-- Login form content -->
+                  <h4>Sign in with Canon ID</h4>
+                  <hr>
+                  <button class="Google-login"><i class="fa-brands fa-google fa-lg" style="color: #FFD43B;"></i> Continue with Google</button>
+                  <button class="Facebook-login"><i class="fa-brands fa-facebook fa-lg" style="color: #ffffff;"></i> Continue with Facebook</button>
+                  <button class="Twitter-login"><i class="fa-brands fa-twitter fa-lg" style="color: #ffffff;"></i> Continue with Twitter</button>
+                  <button class="Apple-login"><i class="fa-brands fa-apple fa-lg" style="color: #ffffff;"></i> Continue with Apple</button>
+                  <a href=# style="text-decoration:none;"><p style="text-align: center;">show more</p></a>
+                  <hr>       
+                  <button class="Email-signup"><i class="fa-regular fa-envelope fa-lg" style="color: #ffffff;"></i> Sign in with your email</button>
+                  <a href="#" style="text-decoration:none;"><p style="text-align:center;">Create a Canon ID account</p></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="guest-checkout">             
+              <input type="radio" name="login" id ="checkout" onclick="showCheckoutForm()"/>
+              <label for="checkout">Checkout as a Guest</label>
+              <p>In a hurry?Checkout as a guest and we'll send you an email confirmation with you order</p>
+              <div class="checkout-wrapper">
+                <div id="checkout-form" style="display: none">
+                  <input type="email" id="email" name="email"/>   
+                  <button id="checkout-btn"type="submit" onClick="validateEmail()">Checkout as Guest</button>
+                </div>
+              </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+<!--
+              <form method="POST" action="/checkout/login/?_DARGS=/block/checkout/checkout-login-canon-id.jsp.guestCheckout" id="guestCheckout" class="js-validation-target" data-validation="{&quot;email&quot;:{&quot;required&quot;:&quot;This field is required&quot;,&quot;email&quot;:&quot;Invalid email address&quot;}}">
+                <div class="form-overview alert-error" id="form-1708497545783">  
+                  <p class="p-3">There were problems with the form</p>
+                </div>
+                <input name="_dyncharset" type="hidden" value="utf-8">
+                <input name="_dynSessConf" type="hidden" value="8195766546935182524">
+                <div class="control-group error">
+                    <label for="email">Email address</label>
+                    <div class="controls full-width-input">
+                      <input name="email" id="email" type="email" value="" class="controls--input.account-actions-input error" data-validation="{&quot;depends&quot;:[&quot;required&quot;,&quot;email&quot;],&quot;vars&quot;:{}}">
+                      <input name="_D:email" type="hidden" value=" ">
+                      <div class="control-errors">  
+                        <ul>      
+                          <li id="email-error">Invalid email address</li>
+                        </ul>
+                      </div>
+                    </div>
+                </div>
+                       
+                <label class="btn btn__primary btn__md btn_checkout_sign_in">
+                  <span class="btn--span">Checkout as guest</span>
+                  <input name="/atg/userprofiling/ProfileFormHandler.guestCheckout" type="submit" value="Checkout as guest" class="visually-hidden">
+                  <input name="_D:/atg/userprofiling/ProfileFormHandler.guestCheckout" type="hidden" value=" ">
+                </label>
+                <input name="_DARGS" type="hidden" value="/block/checkout/checkout-login-canon-id.jsp.guestCheckout">
+              </form>  
+              -->
+              
