@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wrap Div Elements</title>
+    <link  rel="stylesheet" href="style.css" />
+    <script href="script.js"></script>
+  </head>
+  <body>
+    <section class="Region col-8">
+      <h2 class="Checkout-Title">Checkout</h2>
+      <ul class="variant-ul-class">
+        <li class="variable-li-class1">
+            <span class="step-indicator1" id="step-indicator">Step-1</span>
+            <div class="checkout-login">
+                <h4>Customer Sign in / Register</h4>
+                <div class="tabs">
+                  <button type="button" id="sign-in" class="active">sign in</button
+                  ><button type="button" id="guest" class="">new user/guest</button>
+                </div>
+                <div class="tab-content">
+                  <form class="checkout-login__form" autocomplete="sign-in">
+                    <div class="form-group withFloatingLabel">
+                      <input
+                        class=""
+                        name="checkout-email"
+                        id="checkout-email"
+                        type="email"
+                        value=""
+                      /><label for="checkout-email">Email Address</label>
+                    </div>
+                    <div class="form-group withFloatingLabel">
+                      <input class="" name="checkout-password" id="checkout-password" type="password" value=""/>
+                        <label for="checkout-password">Password</label>
+                    </div>
+                    <p class="privacy-policy">
+                      For more information about how we use your data, please see our
+                      <a href="help-privacy-policy">Privacy Policy</a>
+                    </p>
+                    <button class="primary-btn sign-in" type="submit">sign in</button>
+                    <button class="link-btn center underline" type="button">
+                      Forgot password?
+                    </button>
+                  </form>
+                </div>
+              </div>        
+        </li>
+
+        <li class="variable-li-class2">
+            <span class="step-indicator2" id="step-indicator">Step-2</span>
+            <div class="RbLoyaltyPromoGiftCard">
+                <h4 class="loyaltyPromoGiftCardHeaderText">
+                  Loyalty, Promo Codes or Gift Cards
+                </h4>
+                <p class="enterPromoOrGiftCardInfoText">
+                  If you have a Loyalty Number or want to use a Promo Code or Gift Card,
+                  enter them below.
+                </p>
+                <div class="tabs">
+                  <div>
+                    <button class="active" type="button">
+                      <span>LOYALTY NUMBER</span>
+                    </button>
+                  </div>
+                  <div>
+                    <button class="" type="button"><span>PROMO CODE</span></button>
+                  </div>
+                  <div>
+                    <button class="" type="button"><span>GIFT CARD</span></button>
+                  </div>
+                </div>
+                <div class="tab-content">
+                  <div class="item active">
+                    <div class="LoyaltyNo">
+                      <h3>Loyalty Number</h3>
+                      <input type="text" style="display: none" /><input
+                        type="password"
+                        style="display: none"
+                      />
+                      <div class="form-group withFloatingLabel">
+                        <input
+                          class=""
+                          name="loyalty-no"
+                          id="loyalty-no"
+                          type="text"
+                          autocomplete="loyalty"
+                          value=""
+                        /><label for="loyalty-no">Loyalty scheme number</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item false">
+                    <div class="PromoCode">
+                      <div class="header">
+                        <h4>Enter Promo Code</h4>
+                        <div
+                          role="button"
+                          tabindex="-1"
+                          class="collapse-icon collapsed"
+                        ></div>
+                      </div>
+                      <div class="content">
+                        <div class="input-wrapper">
+                          <div class="form-group withFloatingLabel">
+                            <input
+                              class=""
+                              name="promo-code"
+                              id="promo-code"
+                              type="text"
+                              value=""
+                            /><label for="promo-code">Enter Promo Code</label>
+                          </div>
+                        </div>
+                        <button type="button">APPLY CODE</button>
+                      </div>
+                      <div class="info">
+                        You can only use one discount / promo code per order. This
+                        applies to our free-delivery codes, too. Discount / promo codes
+                        cannot be used when buying gift vouchers.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item false">
+                    <div class="GiftCard">
+                      <div class="header">
+                        <h4>Pay with Gift Card</h4>
+                        <div
+                          role="button"
+                          tabindex="-1"
+                          class="collapse-icon collapsed"
+                        ></div>
+                      </div>
+                      <div class="content">
+                        <div class="wrapper">
+                          <div class="CheckoutGiftCardEntry__InputContainer">
+                            <div class="CheckoutGiftCardEntry__NumberContainer">
+                              <div class="form-group withFloatingLabel">
+                                <input
+                                  class=""
+                                  name="giftCardNumber"
+                                  id="giftCardNumber"
+                                  type="text"
+                                  inputmode="numeric"
+                                  maxlength="21"
+                                  autocomplete="cc-number"
+                                  value=""
+                                /><label for="giftCardNumber">Gift card number</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="CheckoutGiftCardEntry__ButtonContainer">
+                            <button type="button" name="apply" class="apply">
+                              apply
+                            </button>
+                          </div>
+                        </div>
+                        <p>
+                          This site is protected by reCAPTCHA and the Google
+                          <a href="https://policies.google.com/privacy"
+                            >Privacy Policy</a
+                          >
+                          and
+                          <a href="https://policies.google.com/terms"
+                            >Terms of Service</a
+                          >
+                          apply.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="skip-button" type="button">Skip Step</button>
+                </div>
+              </div> 
+        </li>
+        <!--Quick Payment Methods (hidden)-->
+        <div class="payments-wrapper"  style="display:none!important;">
+                <h4>Checkout quickly and securely with an express payment option</h4>
+                <div class="alternate-payment-buttons-wrapper">
+                  <div class="buttons-container">
+                    <div class="ApplePay"><div></div></div>
+                    <div class="payments-wrapper__btns">
+                      <div class="paypal-wrapper">
+                        <div class="paypal-validation"></div>
+                        <div class="paypal-checkout">
+                          <div
+                            id="zoid-paypal-buttons-uid_1492b2e342_mdy6mty6ntg"
+                            class="paypal-buttons paypal-buttons-context-iframe paypal-buttons-label-checkout paypal-buttons-layout-vertical"
+                            data-paypal-smart-button-version="5.0.424"
+                            style="height: 45px; transition: all 0.2s ease-in-out 0s"
+                          >
+                            <style nonce="">
+                              #zoid-paypal-buttons-uid_1492b2e342_mdy6mty6ntg {
+                                position: relative;
+                                display: inline-block;
+                                width: 100%;
+                                min-height: 25px;
+                                min-width: 150px;
+                                font-size: 0;
+                              }
+        
+                              #zoid-paypal-buttons-uid_1492b2e342_mdy6mty6ntg > iframe {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                              }
+        
+                              #zoid-paypal-buttons-uid_1492b2e342_mdy6mty6ntg
+                                > iframe.component-frame {
+                                z-index: 100;
+                              }
+        
+                              #zoid-paypal-buttons-uid_1492b2e342_mdy6mty6ntg
+                                > iframe.prerender-frame {
+                                transition: opacity 0.2s linear;
+                                z-index: 200;
+                              }
+        
+                              #zoid-paypal-buttons-uid_1492b2e342_mdy6mty6ntg
+                                > iframe.visible {
+                                opacity: 1;
+                              }
+        
+                              #zoid-paypal-buttons-uid_1492b2e342_mdy6mty6ntg
+                                > iframe.invisible {
+                                opacity: 0;
+                                pointer-events: none;
+                              }
+        
+                              #zoid-paypal-buttons-uid_1492b2e342_mdy6mty6ntg
+                                > .smart-menu {
+                                position: absolute;
+                                z-index: 300;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                }</style>
+                            <iframe
+                              allowtransparency="true"
+                              name="__zoid__paypal_buttons__eyJzZW5kZXIiOnsiZG9tYWluIjoiaHR0cHM6Ly93d3cucnVzc2VsbGFuZGJyb21sZXkuY28udWsifSwibWV0YURhdGEiOnsid2luZG93UmVmIjp7InR5cGUiOiJwYXJlbnQiLCJkaXN0YW5jZSI6MH19LCJyZWZlcmVuY2UiOnsidHlwZSI6InJhdyIsInZhbCI6IntcInVpZFwiOlwiem9pZC1wYXlwYWwtYnV0dG9ucy11aWRfMTQ5MmIyZTM0Ml9tZHk2bXR5Nm50Z1wiLFwiY29udGV4dFwiOlwiaWZyYW1lXCIsXCJ0YWdcIjpcInBheXBhbC1idXR0b25zXCIsXCJjaGlsZERvbWFpbk1hdGNoXCI6e1wiX190eXBlX19cIjpcInJlZ2V4XCIsXCJfX3ZhbF9fXCI6XCJcXFxcLnBheXBhbFxcXFwuKGNvbXxjbikoOlxcXFxkKyk/JFwifSxcInZlcnNpb25cIjpcIjEwXzNfM1wiLFwicHJvcHNcIjp7XCJvbkNsaWNrXCI6e1wiX190eXBlX19cIjpcImNyb3NzX2RvbWFpbl9mdW5jdGlvblwiLFwiX192YWxfX1wiOntcImlkXCI6XCJ1aWRfZmVkNGUwODg2M19tZHk2bXR5Nm50Z1wiLFwibmFtZVwiOlwiaGFuZGxlUFBDbGlja1wifX0sXCJvbkluaXRcIjp7XCJfX3R5cGVfX1wiOlwiY3Jvc3NfZG9tYWluX2Z1bmN0aW9uXCIsXCJfX3ZhbF9fXCI6e1wiaWRcIjpcInVpZF8wODc2NDAxODJlX21keTZtdHk2bnRnXCIsXCJuYW1lXCI6XCJvbkluaXRcIn19LFwiZnVuZGluZ1NvdXJjZVwiOlwicGF5cGFsXCIsXCJjcmVhdGVPcmRlclwiOntcIl9fdHlwZV9fXCI6XCJjcm9zc19kb21haW5fZnVuY3Rpb25cIixcIl9fdmFsX19cIjp7XCJpZFwiOlwidWlkX2JkNjU1NjA3NWNfbWR5Nm10eTZudGdcIixcIm5hbWVcIjpcImNyZWF0ZU9yZGVyXCJ9fSxcIm9uQXBwcm92ZVwiOntcIl9fdHlwZV9fXCI6XCJjcm9zc19kb21haW5fZnVuY3Rpb25cIixcIl9fdmFsX19cIjp7XCJpZFwiOlwidWlkXzY5OGM3ZDNhOThfbWR5Nm10eTZudGdcIixcIm5hbWVcIjpcIm9uQXBwcm92ZVwifX0sXCJvbkNhbmNlbFwiOntcIl9fdHlwZV9fXCI6XCJjcm9zc19kb21haW5fZnVuY3Rpb25cIixcIl9fdmFsX19cIjp7XCJpZFwiOlwidWlkX2IwMTM2ZjYyNzBfbWR5Nm10eTZudGdcIixcIm5hbWVcIjpcIm9uUGF5cGFsQ2FuY2VsXCJ9fSxcIm9uU2hpcHBpbmdDaGFuZ2VcIjp7XCJfX3R5cGVfX1wiOlwiY3Jvc3NfZG9tYWluX2Z1bmN0aW9uXCIsXCJfX3ZhbF9fXCI6e1wiaWRcIjpcInVpZF9lMWMyZDM2ZTRhX21keTZtdHk2bnRnXCIsXCJuYW1lXCI6XCJvblNoaXBwaW5nQ2hhbmdlXCJ9fSxcInN0eWxlXCI6e1wibGFiZWxcIjpcImNoZWNrb3V0XCIsXCJsYXlvdXRcIjpcInZlcnRpY2FsXCIsXCJjb2xvclwiOlwiZ29sZFwiLFwic2hhcGVcIjpcInJlY3RcIixcInRhZ2xpbmVcIjpmYWxzZSxcImhlaWdodFwiOjQ1LFwicGVyaW9kXCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcIm1lbnVQbGFjZW1lbnRcIjpcImJlbG93XCIsXCJkaXNhYmxlTWF4V2lkdGhcIjp7XCJfX3R5cGVfX1wiOlwidW5kZWZpbmVkXCJ9LFwiYm9yZGVyUmFkaXVzXCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifX0sXCJjc3BOb25jZVwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJhbGxvd0JpbGxpbmdQYXltZW50c1wiOnRydWUsXCJhbW91bnRcIjp7XCJfX3R5cGVfX1wiOlwidW5kZWZpbmVkXCJ9LFwiYXBpU3RhZ2VIb3N0XCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcImFwcGxlUGF5XCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcImFwcGxlUGF5U3VwcG9ydFwiOmZhbHNlLFwiYnJhbmRlZFwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJidXR0b25Mb2NhdGlvblwiOlwid3d3LnJ1c3NlbGxhbmRicm9tbGV5LmNvLnVrXCIsXCJidXR0b25TZXNzaW9uSURcIjpcInVpZF9kODcyNzQ2ZmRkX21keTZtdHk2bnRnXCIsXCJidXR0b25TaXplXCI6XCJtZWRpdW1cIixcImJ1eWVyQ291bnRyeVwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJjbGllbnRBY2Nlc3NUb2tlblwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJjbGllbnRJRFwiOlwiQVJQU015WUktMDVNUWhvQ1Jsd0YweG8ybnRGQnEtZlRxS185TTVNdS1RLUR4NVZncVJyY3hDOTM1U00xT1VQUFlic3hRaXhBeEtMeHp1VDJcIixcImNsaWVudE1ldGFkYXRhSURcIjpcInVpZF8xOTVlOTkwZTA0X21kdTZudGM2bXR5XCIsXCJjb21taXRcIjp0cnVlLFwiY29tcG9uZW50c1wiOltcImJ1dHRvbnNcIl0sXCJjcmVhdGVCaWxsaW5nQWdyZWVtZW50XCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcImNyZWF0ZVN1YnNjcmlwdGlvblwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJjcmVhdGVWYXVsdFNldHVwVG9rZW5cIjp7XCJfX3R5cGVfX1wiOlwidW5kZWZpbmVkXCJ9LFwiY3NwXCI6e1wibm9uY2VcIjpcIlwifSxcImN1cnJlbmN5XCI6XCJHQlBcIixcImRlYnVnXCI6ZmFsc2UsXCJkaXNhYmxlQ2FyZFwiOltdLFwiZGlzYWJsZUZ1bmRpbmdcIjpbXSxcImRpc2FibGVTZXRDb29raWVcIjp0cnVlLFwiZGlzcGxheU9ubHlcIjpbXSxcImVuYWJsZUZ1bmRpbmdcIjpbXSxcImVuYWJsZVRocmVlRG9tYWluU2VjdXJlXCI6ZmFsc2UsXCJlbmFibGVWYXVsdFwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJlbnZcIjpcInByb2R1Y3Rpb25cIixcImV4cGVyaW1lbnRcIjp7XCJlbmFibGVWZW5tb1wiOmZhbHNlfSxcImV4cGVyaW1lbnRhdGlvblwiOnt9LFwiZmxvd1wiOlwicHVyY2hhc2VcIixcImZ1bmRpbmdFbGlnaWJpbGl0eVwiOntcInBheXBhbFwiOntcImVsaWdpYmxlXCI6dHJ1ZSxcInZhdWx0YWJsZVwiOnRydWV9LFwicGF5bGF0ZXJcIjp7XCJlbGlnaWJsZVwiOmZhbHNlLFwidmF1bHRhYmxlXCI6ZmFsc2UsXCJwcm9kdWN0c1wiOntcInBheUluM1wiOntcImVsaWdpYmxlXCI6ZmFsc2UsXCJ2YXJpYW50XCI6bnVsbH0sXCJwYXlJbjRcIjp7XCJlbGlnaWJsZVwiOmZhbHNlLFwidmFyaWFudFwiOm51bGx9LFwicGF5bGF0ZXJcIjp7XCJlbGlnaWJsZVwiOmZhbHNlLFwidmFyaWFudFwiOm51bGx9fX0sXCJjYXJkXCI6e1wiZWxpZ2libGVcIjp0cnVlLFwiYnJhbmRlZFwiOnRydWUsXCJpbnN0YWxsbWVudHNcIjpmYWxzZSxcInZlbmRvcnNcIjp7XCJ2aXNhXCI6e1wiZWxpZ2libGVcIjp0cnVlLFwidmF1bHRhYmxlXCI6dHJ1ZX0sXCJtYXN0ZXJjYXJkXCI6e1wiZWxpZ2libGVcIjp0cnVlLFwidmF1bHRhYmxlXCI6dHJ1ZX0sXCJhbWV4XCI6e1wiZWxpZ2libGVcIjp0cnVlLFwidmF1bHRhYmxlXCI6dHJ1ZX0sXCJkaXNjb3ZlclwiOntcImVsaWdpYmxlXCI6ZmFsc2UsXCJ2YXVsdGFibGVcIjp0cnVlfSxcImhpcGVyXCI6e1wiZWxpZ2libGVcIjpmYWxzZSxcInZhdWx0YWJsZVwiOmZhbHNlfSxcImVsb1wiOntcImVsaWdpYmxlXCI6ZmFsc2UsXCJ2YXVsdGFibGVcIjp0cnVlfSxcImpjYlwiOntcImVsaWdpYmxlXCI6ZmFsc2UsXCJ2YXVsdGFibGVcIjp0cnVlfX0sXCJndWVzdEVuYWJsZWRcIjpmYWxzZX0sXCJ2ZW5tb1wiOntcImVsaWdpYmxlXCI6ZmFsc2UsXCJ2YXVsdGFibGVcIjpmYWxzZX0sXCJpdGF1XCI6e1wiZWxpZ2libGVcIjpmYWxzZX0sXCJjcmVkaXRcIjp7XCJlbGlnaWJsZVwiOmZhbHNlfSxcImFwcGxlcGF5XCI6e1wiZWxpZ2libGVcIjpmYWxzZX0sXCJzZXBhXCI6e1wiZWxpZ2libGVcIjpmYWxzZX0sXCJpZGVhbFwiOntcImVsaWdpYmxlXCI6ZmFsc2V9LFwiYmFuY29udGFjdFwiOntcImVsaWdpYmxlXCI6ZmFsc2V9LFwiZ2lyb3BheVwiOntcImVsaWdpYmxlXCI6ZmFsc2V9LFwiZXBzXCI6e1wiZWxpZ2libGVcIjpmYWxzZX0sXCJzb2ZvcnRcIjp7XCJlbGlnaWJsZVwiOmZhbHNlfSxcIm15YmFua1wiOntcImVsaWdpYmxlXCI6ZmFsc2V9LFwicDI0XCI6e1wiZWxpZ2libGVcIjpmYWxzZX0sXCJ3ZWNoYXRwYXlcIjp7XCJlbGlnaWJsZVwiOmZhbHNlfSxcInBheXVcIjp7XCJlbGlnaWJsZVwiOmZhbHNlfSxcImJsaWtcIjp7XCJlbGlnaWJsZVwiOmZhbHNlfSxcInRydXN0bHlcIjp7XCJlbGlnaWJsZVwiOmZhbHNlfSxcIm94eG9cIjp7XCJlbGlnaWJsZVwiOmZhbHNlfSxcImJvbGV0b1wiOntcImVsaWdpYmxlXCI6ZmFsc2V9LFwiYm9sZXRvYmFuY2FyaW9cIjp7XCJlbGlnaWJsZVwiOmZhbHNlfSxcIm1lcmNhZG9wYWdvXCI6e1wiZWxpZ2libGVcIjpmYWxzZX0sXCJtdWx0aWJhbmNvXCI6e1wiZWxpZ2libGVcIjpmYWxzZX0sXCJzYXRpc3BheVwiOntcImVsaWdpYmxlXCI6ZmFsc2V9LFwicGFpZHlcIjp7XCJlbGlnaWJsZVwiOmZhbHNlfX0sXCJnZXRQYWdlVXJsXCI6e1wiX190eXBlX19cIjpcImNyb3NzX2RvbWFpbl9mdW5jdGlvblwiLFwiX192YWxfX1wiOntcImlkXCI6XCJ1aWRfZWJjOTNlNjU3YV9tZHk2bXR5Nm50Z1wiLFwibmFtZVwiOlwiZ2V0UGFnZVVybFwifX0sXCJnZXRQb3B1cEJyaWRnZVwiOntcIl9fdHlwZV9fXCI6XCJjcm9zc19kb21haW5fZnVuY3Rpb25cIixcIl9fdmFsX19cIjp7XCJpZFwiOlwidWlkX2Q3ZmY0Yjc0MGRfbWR5Nm10eTZudGdcIixcIm5hbWVcIjpcImdldFBvcHVwQnJpZGdlXCJ9fSxcImdldFByZXJlbmRlckRldGFpbHNcIjp7XCJfX3R5cGVfX1wiOlwiY3Jvc3NfZG9tYWluX2Z1bmN0aW9uXCIsXCJfX3ZhbF9fXCI6e1wiaWRcIjpcInVpZF8zNjU4OGI2NGQ4X21keTZtdHk2bnRnXCIsXCJuYW1lXCI6XCJnZXRQcmVyZW5kZXJEZXRhaWxzXCJ9fSxcImdldFF1ZXJpZWRFbGlnaWJsZUZ1bmRpbmdcIjp7XCJfX3R5cGVfX1wiOlwiY3Jvc3NfZG9tYWluX2Z1bmN0aW9uXCIsXCJfX3ZhbF9fXCI6e1wiaWRcIjpcInVpZF9lNWI5ZDNkZGIxX21keTZtdHk2bnRnXCIsXCJuYW1lXCI6XCJnZXRRdWVyaWVkRWxpZ2libGVGdW5kaW5nXCJ9fSxcImhvc3RlZEJ1dHRvbklkXCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcImludGVudFwiOlwiY2FwdHVyZVwiLFwibG9jYWxlXCI6e1wiY291bnRyeVwiOlwiVVNcIixcImxhbmdcIjpcImVuXCJ9LFwibWVyY2hhbnRJRFwiOltdLFwibWVyY2hhbnRSZXF1ZXN0ZWRQb3B1cHNEaXNhYmxlZFwiOmZhbHNlLFwibm9uY2VcIjpcIlwiLFwib25Db21wbGV0ZVwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJvblNoaXBwaW5nQWRkcmVzc0NoYW5nZVwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJvblNoaXBwaW5nT3B0aW9uc0NoYW5nZVwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJwYWdlVHlwZVwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJwYXJ0bmVyQXR0cmlidXRpb25JRFwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJwYXltZW50TWV0aG9kTm9uY2VcIjp7XCJfX3R5cGVfX1wiOlwidW5kZWZpbmVkXCJ9LFwicGF5bWVudE1ldGhvZFRva2VuXCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcInBheW1lbnRSZXF1ZXN0XCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcInBsYXRmb3JtXCI6XCJkZXNrdG9wXCIsXCJyZWZlcnJlckRvbWFpblwiOlwid3d3Lmdvb2dsZS5jb21cIixcInJlbWVtYmVyXCI6e1wiX190eXBlX19cIjpcImNyb3NzX2RvbWFpbl9mdW5jdGlvblwiLFwiX192YWxfX1wiOntcImlkXCI6XCJ1aWRfZGJhNGFlMWM5ZF9tZHk2bXR5Nm50Z1wiLFwibmFtZVwiOlwicmVtZW1iZXJcIn19LFwicmVtZW1iZXJlZFwiOltdLFwicmVuZGVyZWRCdXR0b25zXCI6W1wicGF5cGFsXCJdLFwic2Vzc2lvbklEXCI6XCJ1aWRfMTk1ZTk5MGUwNF9tZHU2bnRjNm10eVwiLFwic2RrQ29ycmVsYXRpb25JRFwiOlwiZjU2NDkxNGY2OWM1ZVwiLFwic2RrSW50ZWdyYXRpb25Tb3VyY2VcIjpcInJlYWN0LXBheXBhbC1qc1wiLFwic2Vzc2lvblN0YXRlXCI6e1wiZ2V0XCI6e1wiX190eXBlX19cIjpcImNyb3NzX2RvbWFpbl9mdW5jdGlvblwiLFwiX192YWxfX1wiOntcImlkXCI6XCJ1aWRfMGFjODg5N2M3Nl9tZHk2bXR5Nm50Z1wiLFwibmFtZVwiOlwiZ2V0XCJ9fSxcInNldFwiOntcIl9fdHlwZV9fXCI6XCJjcm9zc19kb21haW5fZnVuY3Rpb25cIixcIl9fdmFsX19cIjp7XCJpZFwiOlwidWlkXzBjMWRkZWIzODBfbWR5Nm10eTZudGdcIixcIm5hbWVcIjpcInNldFwifX19LFwic3RhZ2VIb3N0XCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcInN0b3JhZ2VJRFwiOlwidWlkXzNlYzJiODM0ZTRfbWR1Nm10cTZtemVcIixcInN0b3JhZ2VTdGF0ZVwiOntcImdldFwiOntcIl9fdHlwZV9fXCI6XCJjcm9zc19kb21haW5fZnVuY3Rpb25cIixcIl9fdmFsX19cIjp7XCJpZFwiOlwidWlkXzM4MWUwOTZhOGJfbWR5Nm10eTZudGdcIixcIm5hbWVcIjpcImdldFwifX0sXCJzZXRcIjp7XCJfX3R5cGVfX1wiOlwiY3Jvc3NfZG9tYWluX2Z1bmN0aW9uXCIsXCJfX3ZhbF9fXCI6e1wiaWRcIjpcInVpZF9lMDcxMmU0ZTgzX21keTZtdHk2bnRnXCIsXCJuYW1lXCI6XCJzZXRcIn19fSxcInN1cHBvcnRlZE5hdGl2ZUJyb3dzZXJcIjpmYWxzZSxcInN1cHBvcnRzUG9wdXBzXCI6dHJ1ZSxcInRlc3RcIjp7XCJhY3Rpb25cIjpcImNoZWNrb3V0XCJ9LFwidXNlckV4cGVyaWVuY2VGbG93XCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcInVzZXJJRFRva2VuXCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcInZhdWx0XCI6ZmFsc2UsXCJ3YWxsZXRcIjp7XCJfX3R5cGVfX1wiOlwidW5kZWZpbmVkXCJ9fSxcImV4cG9ydHNcIjp7XCJpbml0XCI6e1wiX190eXBlX19cIjpcImNyb3NzX2RvbWFpbl9mdW5jdGlvblwiLFwiX192YWxfX1wiOntcImlkXCI6XCJ1aWRfZjFlNzY1YzAyYV9tZHk2bXR5Nm50Z1wiLFwibmFtZVwiOlwiaW5pdFwifX0sXCJjbG9zZVwiOntcIl9fdHlwZV9fXCI6XCJjcm9zc19kb21haW5fZnVuY3Rpb25cIixcIl9fdmFsX19cIjp7XCJpZFwiOlwidWlkXzhlYWFiZDY0MmZfbWR5Nm10eTZudGdcIixcIm5hbWVcIjpcImNsb3NlOjptZW1vaXplZFwifX0sXCJjaGVja0Nsb3NlXCI6e1wiX190eXBlX19cIjpcImNyb3NzX2RvbWFpbl9mdW5jdGlvblwiLFwiX192YWxfX1wiOntcImlkXCI6XCJ1aWRfNzJmYTljZDE3Nl9tZHk2bXR5Nm50Z1wiLFwibmFtZVwiOlwiY2hlY2tDbG9zZVwifX0sXCJyZXNpemVcIjp7XCJfX3R5cGVfX1wiOlwiY3Jvc3NfZG9tYWluX2Z1bmN0aW9uXCIsXCJfX3ZhbF9fXCI6e1wiaWRcIjpcInVpZF8wOTMyODBlYTMzX21keTZtdHk2bnRnXCIsXCJuYW1lXCI6XCJGblwifX0sXCJvbkVycm9yXCI6e1wiX190eXBlX19cIjpcImNyb3NzX2RvbWFpbl9mdW5jdGlvblwiLFwiX192YWxfX1wiOntcImlkXCI6XCJ1aWRfMDQ5YzRkMTExZV9tZHk2bXR5Nm50Z1wiLFwibmFtZVwiOlwiVW5cIn19LFwic2hvd1wiOntcIl9fdHlwZV9fXCI6XCJjcm9zc19kb21haW5fZnVuY3Rpb25cIixcIl9fdmFsX19cIjp7XCJpZFwiOlwidWlkX2Y3YTE3Njk3NjlfbWR5Nm10eTZudGdcIixcIm5hbWVcIjpcImduXCJ9fSxcImhpZGVcIjp7XCJfX3R5cGVfX1wiOlwiY3Jvc3NfZG9tYWluX2Z1bmN0aW9uXCIsXCJfX3ZhbF9fXCI6e1wiaWRcIjpcInVpZF9iMjdjY2EwODcwX21keTZtdHk2bnRnXCIsXCJuYW1lXCI6XCJ2blwifX0sXCJleHBvcnRcIjp7XCJfX3R5cGVfX1wiOlwiY3Jvc3NfZG9tYWluX2Z1bmN0aW9uXCIsXCJfX3ZhbF9fXCI6e1wiaWRcIjpcInVpZF82YmRmZDVkMmI0X21keTZtdHk2bnRnXCIsXCJuYW1lXCI6XCJXblwifX19fSJ9fQ__"
+                              title="PayPal"
+                              allowpaymentrequest="allowpaymentrequest"
+                              scrolling="no"
+                              id="jsx-iframe-85ba86a7a7"
+                              class="component-frame visible"
+                              style="background-color: transparent; border: none"
+                            ></iframe>
+                            <div id="smart-menu" class="smart-menu"></div>
+                            <div
+                              id="installments-modal"
+                              class="installments-modal"
+                            ></div>
+                            <iframe
+                              name="__detect_close_uid_6b80807497_mdy6mty6ntg__"
+                              style="display: none"
+                            ></iframe>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="error-container"></div>
+                </div>
+                <div class="payments-wrapper__text">
+                  Or continue below to add your details or to use our Deliver to Store
+                  option
+                </div>
+            </div>        
+
+        <li class="variable-li-class3">
+            <span class="step-indicator3" id="step-indicator">Step-3</span>
+            <div class="book-tabs">
+                <h4>Delivery Address</h4>
+                <div class="tabs">
+                  <button type="button" id="home" class="active">home delivery</button>
+                  <button type="button" id="store" class="">store delivery</button>
+                </div>
+                <div class="HomeDeliveryAddress">
+                  <form class="book-tabs__form">
+                    <div class="prefix">
+                      <div class="form-group withFloatingLabel">
+                        <div class="rb-select">
+                          <select class="" name="prefixDel" id="prefixDel">
+                            <option value=""></option>
+                            <option value="Mr">Mr</option>
+                            <option value="Mrs">Mrs</option>
+                            <option value="Ms">Ms</option>
+                            <option value="Miss">Miss</option>
+                            <option value="Mx">Mx</option>
+                            <option value="Dr">Dr</option></select
+                          ><svg class="Icon" viewBox="0 0 320 512">
+                            <path
+                              fill="currentColor"
+                              d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"
+                            ></path>
+                          </svg>
+                        </div>
+                        <label for="prefixDel" id="prefixDel">Title</label>
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="form-group withFloatingLabel">
+                        <input
+                          class=""
+                          name="firstNameDel"
+                          id="firstNameDel"
+                          type="text"
+                          value=""
+                        /><label for="firstNameDel">First Name</label>
+                      </div>
+                      <div class="form-group withFloatingLabel">
+                        <input
+                          class=""
+                          name="lastNameDel"
+                          id="lastNameDel"
+                          type="text"
+                          value=""
+                        /><label for="lastNameDel">Last Name</label>
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="form-group withFloatingLabel">
+                        <input
+                          class=""
+                          name="phoneNumDel"
+                          id="phoneNumDel"
+                          type="text"
+                          value=""
+                        /><label for="phoneNumDel">Phone Number</label>
+                      </div>
+                    </div>
+                    <div class="addresses-wrapper" role="button" tabindex="-1">
+                      <div class="form-group withFloatingLabel">
+                        <input
+                          class=""
+                          name="customFindAddressDel"
+                          id="customFindAddressDel"
+                          type="text"
+                          value=""
+                        /><label for="customFindAddressDel"
+                          >Start typing your address or postcode</label
+                        >
+                      </div>
+                    </div>
+                    <div role="button" tabindex="-1" class="form__manual-edit">
+                      Or click here to enter your full address manually
+                    </div>
+                  </form>
+                </div>
+                <div class="HomeBillingAddress">
+                  <input
+                    type="checkbox"
+                    name="useAsBilling"
+                    id="useAsBilling"
+                    checked=""
+                  /><span>Use this as my billing address</span>
+                </div>
+              </div>        
+        </li>
+
+        <li class="variable-li-class4">
+            <span class="step-indicator4" id="step-indicator">Step-4</span>
+            <form class="checkout-payment" autocomplete="payment-details">
+                <input type="text" style="display: none" /><input
+                  type="password"
+                  style="display: none"
+                />
+                <h4 class="payment-details">Payment Details</h4>
+                <div class="form-row">
+                  <div class="form-group withFloatingLabel">
+                    <input
+                      class=""
+                      name="cardName"
+                      id="cardName"
+                      type="text"
+                      value=""
+                    /><label for="cardName">Name on Card</label>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group withFloatingLabel">
+                    <div class="rb-select">
+                      <select class="" name="card-type" id="card-type">
+                        <option value=""></option>
+                        <option value="Visa">Visa</option>
+                        <option value="Mastercard">Mastercard</option>
+                        <option value="American Express">American Express</option>
+                        <option value="Maestro">Maestro</option>
+                        <option value="Visa Electron">Visa Electron</option></select
+                      ><svg class="Icon" viewBox="0 0 320 512">
+                        <path
+                          fill="currentColor"
+                          d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"
+                        ></path>
+                      </svg>
+                    </div>
+                    <label for="card-type" id="card-type">Card Type</label>
+                  </div>
+                  <div class="card-type__images">
+                    <img
+                      src="/file/v6060804815930787560/ccimg/visa_straight.png"
+                      alt="Visa"
+                    /><img
+                      src="/file/v486318503902086876/ccimg/mastercard.png"
+                      alt="Mastercard"
+                    /><img
+                      src="/file/v4481581234549225746/ccimg/amex.png"
+                      alt="American Express"
+                    /><img src="/file/general/maestro.png" alt="Maestro" /><img
+                      src="/file/general/visa_electron.png"
+                      alt="Visa Electron"
+                    />
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group withFloatingLabel">
+                    <input
+                      class=""
+                      name="cardNumber"
+                      id="cardNumber"
+                      type="text"
+                      value=""
+                    /><label for="cardNumber">Card Number</label>
+                  </div>
+                  <div class="form-row cvv-wrapper">
+                    <div class="form-group withFloatingLabel">
+                      <input
+                        class=""
+                        name="cardCVV"
+                        id="cardCVV"
+                        type="password"
+                        value=""
+                      /><label for="cardCVV">CVV</label>
+                    </div>
+                    <div class="cvv-info" role="button" tabindex="-1">What's this?</div>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group withFloatingLabel">
+                    <div class="rb-select">
+                      <select
+                        data-cs-mask="true"
+                        class=""
+                        name="card-expires-moths"
+                        id="card-expires-moths"
+                      >
+                        <option value=""></option>
+                        <option value="01 - January">01 - January</option>
+                        <option value="02 - February">02 - February</option>
+                        <option value="03 - March">03 - March</option>
+                        <option value="04 - April">04 - April</option>
+                        <option value="05 - May">05 - May</option>
+                        <option value="06 - June">06 - June</option>
+                        <option value="07 - July">07 - July</option>
+                        <option value="08 - August">08 - August</option>
+                        <option value="09 - September">09 - September</option>
+                        <option value="10 - October">10 - October</option>
+                        <option value="11 - November">11 - November</option>
+                        <option value="12 - December">12 - December</option></select
+                      ><svg class="Icon" viewBox="0 0 320 512">
+                        <path
+                          fill="currentColor"
+                          d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"
+                        ></path>
+                      </svg>
+                    </div>
+                    <label for="card-expires-moths" id="card-expires-moths"
+                      >Expires (Month)</label
+                    >
+                  </div>
+                  <div class="form-group withFloatingLabel">
+                    <div class="rb-select">
+                      <select
+                        data-cs-mask="true"
+                        class=""
+                        name="card-expires-years"
+                        id="card-expires-years"
+                      >
+                        <option value=""></option>
+                        <option value="2024">2024</option>
+                        <option value="2025">2025</option>
+                        <option value="2026">2026</option>
+                        <option value="2027">2027</option>
+                        <option value="2028">2028</option>
+                        <option value="2029">2029</option>
+                        <option value="2030">2030</option>
+                        <option value="2031">2031</option>
+                        <option value="2032">2032</option>
+                        <option value="2033">2033</option>
+                        <option value="2034">2034</option>
+                        <option value="2035">2035</option>
+                        <option value="2036">2036</option>
+                        <option value="2037">2037</option>
+                        <option value="2038">2038</option>
+                        <option value="2039">2039</option>
+                        <option value="2040">2040</option>
+                        <option value="2041">2041</option>
+                        <option value="2042">2042</option>
+                        <option value="2043">2043</option></select
+                      ><svg class="Icon" viewBox="0 0 320 512">
+                        <path
+                          fill="currentColor"
+                          d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"
+                        ></path>
+                      </svg>
+                    </div>
+                    <label for="card-expires-years" id="card-expires-years"
+                      >Expires (Year)</label
+                    >
+                  </div>
+                </div>
+              </form>
+        
+        </li>
+        <li class="variable-li-class-summary" style="display: none;">
+            <div class="checkout-summary">
+                <h4 class="order-summary">Order Summary</h4>
+                <div class="checkout-summary__amount">
+                  <div><span>Sub-Total:</span><span>£635.00</span></div>
+                  <div><span>Shipping:</span><span>£0.00</span></div>
+                  <div class="shipping">
+                    <label class="shippingLabel" for="100003" id="100003"
+                      ><input
+                        type="radio"
+                        name="100003"
+                        id="100003"
+                        class="shippingInput"
+                        checked=""
+                      /><span
+                        >Standard (3-5 business days) - £5.00 (FREE over £250)</span
+                      ></label
+                    ><label class="shippingLabel" for="100004" id="100004"
+                      ><input
+                        type="radio"
+                        name="100004"
+                        id="100004"
+                        class="shippingInput"
+                      /><span
+                        >Next business day (order before 2pm) - £8.00
+                      </span></label
+                    ><label class="shippingLabel" for="100005" id="100005"
+                      ><input
+                        type="radio"
+                        name="100005"
+                        id="100005"
+                        class="shippingInput"
+                      /><span
+                        >Saturday (order before 2pm on Friday) - £8.00
+                      </span></label
+                    >
+                  </div>
+                  <div><span>Sales Tax:</span><span>£0.00</span></div>
+                  <div class="order-total-custom-styles">
+                    <span>Order Total:</span><span>£635.00</span>
+                  </div>
+                </div>
+                <div>
+                  <label for="delivery-comment" class="delivery-comment"
+                    ><span>Delivery Comment</span
+                    ><textarea
+                      id="delivery-comment"
+                      name="delivery-comment"
+                      rows="5"
+                      maxlength="44"
+                      placeholder="Enter specific delivery requirements (up to 40 characters). Please note all orders require a signature."
+                    ></textarea>
+                  </label>
+                </div>
+                <button class="checkout-summary__submit-btn" type="button">
+                  place order
+                </button>
+                <p class="recaptcha-message">
+                  This site is protected by reCAPTCHA and the Google
+                  <a href="https://policies.google.com/privacy">Privacy Policy</a> and
+                  <a href="https://policies.google.com/terms">Terms of Service</a>
+                  apply.
+                </p>
+                <p class="payment-text">
+                  The next screen you see may be payment card verification through your
+                  card issuer. <br />
+                </p>
+                <p class="payment-text">
+                  Or complete and pay for your order with PayPal
+                </p>
+                <div class="paypal-button-container">
+                  <div class="paypal-wrapper">
+                    <div class="paypal-validation"></div>
+                    <div class="paypal-checkout">
+                      <div
+                        id="zoid-paypal-buttons-uid_62e38922e0_mdy6mty6ntg"
+                        class="paypal-buttons paypal-buttons-context-iframe paypal-buttons-label-checkout paypal-buttons-layout-vertical"
+                        data-paypal-smart-button-version="5.0.424"
+                        style="height: 45px; transition: all 0.2s ease-in-out 0s"
+                      >
+                        <style nonce="">
+                          #zoid-paypal-buttons-uid_62e38922e0_mdy6mty6ntg {
+                            position: relative;
+                            display: inline-block;
+                            width: 100%;
+                            min-height: 25px;
+                            min-width: 150px;
+                            font-size: 0;
+                          }
+        
+                          #zoid-paypal-buttons-uid_62e38922e0_mdy6mty6ntg > iframe {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                          }
+        
+                          #zoid-paypal-buttons-uid_62e38922e0_mdy6mty6ntg
+                            > iframe.component-frame {
+                            z-index: 100;
+                          }
+        
+                          #zoid-paypal-buttons-uid_62e38922e0_mdy6mty6ntg
+                            > iframe.prerender-frame {
+                            transition: opacity 0.2s linear;
+                            z-index: 200;
+                          }
+        
+                          #zoid-paypal-buttons-uid_62e38922e0_mdy6mty6ntg
+                            > iframe.visible {
+                            opacity: 1;
+                          }
+        
+                          #zoid-paypal-buttons-uid_62e38922e0_mdy6mty6ntg
+                            > iframe.invisible {
+                            opacity: 0;
+                            pointer-events: none;
+                          }
+        
+                          #zoid-paypal-buttons-uid_62e38922e0_mdy6mty6ntg
+                            > .smart-menu {
+                            position: absolute;
+                            z-index: 300;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            }</style>
+                        <iframe
+                          allowtransparency="true"
+                          name="__zoid__paypal_buttons__eyJzZW5kZXIiOnsiZG9tYWluIjoiaHR0cHM6Ly93d3cucnVzc2VsbGFuZGJyb21sZXkuY28udWsifSwibWV0YURhdGEiOnsid2luZG93UmVmIjp7InR5cGUiOiJwYXJlbnQiLCJkaXN0YW5jZSI6MH19LCJyZWZlcmVuY2UiOnsidHlwZSI6InJhdyIsInZhbCI6IntcInVpZFwiOlwiem9pZC1wYXlwYWwtYnV0dG9ucy11aWRfNjJlMzg5MjJlMF9tZHk2bXR5Nm50Z1wiLFwiY29udGV4dFwiOlwiaWZyYW1lXCIsXCJ0YWdcIjpcInBheXBhbC1idXR0b25zXCIsXCJjaGlsZERvbWFpbk1hdGNoXCI6e1wiX190eXBlX19cIjpcInJlZ2V4XCIsXCJfX3ZhbF9fXCI6XCJcXFxcLnBheXBhbFxcXFwuKGNvbXxjbikoOlxcXFxkKyk/JFwifSxcInZlcnNpb25cIjpcIjEwXzNfM1wiLFwicHJvcHNcIjp7XCJvbkNsaWNrXCI6e1wiX190eXBlX19cIjpcImNyb3NzX2RvbWFpbl9mdW5jdGlvblwiLFwiX192YWxfX1wiOntcImlkXCI6XCJ1aWRfZWY4YmQ3OTcxMl9tZHk2bXR5Nm50Z1wiLFwibmFtZVwiOlwiaGFuZGxlUFBDbGlja1wifX0sXCJvbkluaXRcIjp7XCJfX3R5cGVfX1wiOlwiY3Jvc3NfZG9tYWluX2Z1bmN0aW9uXCIsXCJfX3ZhbF9fXCI6e1wiaWRcIjpcInVpZF80NjI4YzAzNjA1X21keTZtdHk2bnRnXCIsXCJuYW1lXCI6XCJvbkluaXRcIn19LFwiZnVuZGluZ1NvdXJjZVwiOlwicGF5cGFsXCIsXCJjcmVhdGVPcmRlclwiOntcIl9fdHlwZV9fXCI6XCJjcm9zc19kb21haW5fZnVuY3Rpb25cIixcIl9fdmFsX19cIjp7XCJpZFwiOlwidWlkX2Y5MzE3N2M4ODBfbWR5Nm10eTZudGdcIixcIm5hbWVcIjpcImNyZWF0ZU9yZGVyXCJ9fSxcIm9uQXBwcm92ZVwiOntcIl9fdHlwZV9fXCI6XCJjcm9zc19kb21haW5fZnVuY3Rpb25cIixcIl9fdmFsX19cIjp7XCJpZFwiOlwidWlkX2M2Y2FkNzg2NjdfbWR5Nm10eTZudGdcIixcIm5hbWVcIjpcIm9uQXBwcm92ZVwifX0sXCJvbkNhbmNlbFwiOntcIl9fdHlwZV9fXCI6XCJjcm9zc19kb21haW5fZnVuY3Rpb25cIixcIl9fdmFsX19cIjp7XCJpZFwiOlwidWlkXzVmMDRiNjljYzVfbWR5Nm10eTZudGdcIixcIm5hbWVcIjpcIm9uUGF5cGFsQ2FuY2VsXCJ9fSxcIm9uU2hpcHBpbmdDaGFuZ2VcIjp7XCJfX3R5cGVfX1wiOlwiY3Jvc3NfZG9tYWluX2Z1bmN0aW9uXCIsXCJfX3ZhbF9fXCI6e1wiaWRcIjpcInVpZF81OTc2OWM2YTljX21keTZtdHk2bnRnXCIsXCJuYW1lXCI6XCJvblNoaXBwaW5nQ2hhbmdlXCJ9fSxcInN0eWxlXCI6e1wibGFiZWxcIjpcImNoZWNrb3V0XCIsXCJsYXlvdXRcIjpcInZlcnRpY2FsXCIsXCJjb2xvclwiOlwiZ29sZFwiLFwic2hhcGVcIjpcInJlY3RcIixcInRhZ2xpbmVcIjpmYWxzZSxcImhlaWdodFwiOjQ1LFwicGVyaW9kXCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcIm1lbnVQbGFjZW1lbnRcIjpcImJlbG93XCIsXCJkaXNhYmxlTWF4V2lkdGhcIjp7XCJfX3R5cGVfX1wiOlwidW5kZWZpbmVkXCJ9LFwiYm9yZGVyUmFkaXVzXCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifX0sXCJjc3BOb25jZVwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJhbGxvd0JpbGxpbmdQYXltZW50c1wiOnRydWUsXCJhbW91bnRcIjp7XCJfX3R5cGVfX1wiOlwidW5kZWZpbmVkXCJ9LFwiYXBpU3RhZ2VIb3N0XCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcImFwcGxlUGF5XCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcImFwcGxlUGF5U3VwcG9ydFwiOmZhbHNlLFwiYnJhbmRlZFwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJidXR0b25Mb2NhdGlvblwiOlwid3d3LnJ1c3NlbGxhbmRicm9tbGV5LmNvLnVrXCIsXCJidXR0b25TZXNzaW9uSURcIjpcInVpZF9iYTNkZWVlMzAwX21keTZtdHk2bnRnXCIsXCJidXR0b25TaXplXCI6XCJtZWRpdW1cIixcImJ1eWVyQ291bnRyeVwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJjbGllbnRBY2Nlc3NUb2tlblwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJjbGllbnRJRFwiOlwiQVJQU015WUktMDVNUWhvQ1Jsd0YweG8ybnRGQnEtZlRxS185TTVNdS1RLUR4NVZncVJyY3hDOTM1U00xT1VQUFlic3hRaXhBeEtMeHp1VDJcIixcImNsaWVudE1ldGFkYXRhSURcIjpcInVpZF8xOTVlOTkwZTA0X21kdTZudGM2bXR5XCIsXCJjb21taXRcIjp0cnVlLFwiY29tcG9uZW50c1wiOltcImJ1dHRvbnNcIl0sXCJjcmVhdGVCaWxsaW5nQWdyZWVtZW50XCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcImNyZWF0ZVN1YnNjcmlwdGlvblwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJjcmVhdGVWYXVsdFNldHVwVG9rZW5cIjp7XCJfX3R5cGVfX1wiOlwidW5kZWZpbmVkXCJ9LFwiY3NwXCI6e1wibm9uY2VcIjpcIlwifSxcImN1cnJlbmN5XCI6XCJHQlBcIixcImRlYnVnXCI6ZmFsc2UsXCJkaXNhYmxlQ2FyZFwiOltdLFwiZGlzYWJsZUZ1bmRpbmdcIjpbXSxcImRpc2FibGVTZXRDb29raWVcIjp0cnVlLFwiZGlzcGxheU9ubHlcIjpbXSxcImVuYWJsZUZ1bmRpbmdcIjpbXSxcImVuYWJsZVRocmVlRG9tYWluU2VjdXJlXCI6ZmFsc2UsXCJlbmFibGVWYXVsdFwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJlbnZcIjpcInByb2R1Y3Rpb25cIixcImV4cGVyaW1lbnRcIjp7XCJlbmFibGVWZW5tb1wiOmZhbHNlfSxcImV4cGVyaW1lbnRhdGlvblwiOnt9LFwiZmxvd1wiOlwicHVyY2hhc2VcIixcImZ1bmRpbmdFbGlnaWJpbGl0eVwiOntcInBheXBhbFwiOntcImVsaWdpYmxlXCI6dHJ1ZSxcInZhdWx0YWJsZVwiOnRydWV9LFwicGF5bGF0ZXJcIjp7XCJlbGlnaWJsZVwiOmZhbHNlLFwidmF1bHRhYmxlXCI6ZmFsc2UsXCJwcm9kdWN0c1wiOntcInBheUluM1wiOntcImVsaWdpYmxlXCI6ZmFsc2UsXCJ2YXJpYW50XCI6bnVsbH0sXCJwYXlJbjRcIjp7XCJlbGlnaWJsZVwiOmZhbHNlLFwidmFyaWFudFwiOm51bGx9LFwicGF5bGF0ZXJcIjp7XCJlbGlnaWJsZVwiOmZhbHNlLFwidmFyaWFudFwiOm51bGx9fX0sXCJjYXJkXCI6e1wiZWxpZ2libGVcIjp0cnVlLFwiYnJhbmRlZFwiOnRydWUsXCJpbnN0YWxsbWVudHNcIjpmYWxzZSxcInZlbmRvcnNcIjp7XCJ2aXNhXCI6e1wiZWxpZ2libGVcIjp0cnVlLFwidmF1bHRhYmxlXCI6dHJ1ZX0sXCJtYXN0ZXJjYXJkXCI6e1wiZWxpZ2libGVcIjp0cnVlLFwidmF1bHRhYmxlXCI6dHJ1ZX0sXCJhbWV4XCI6e1wiZWxpZ2libGVcIjp0cnVlLFwidmF1bHRhYmxlXCI6dHJ1ZX0sXCJkaXNjb3ZlclwiOntcImVsaWdpYmxlXCI6ZmFsc2UsXCJ2YXVsdGFibGVcIjp0cnVlfSxcImhpcGVyXCI6e1wiZWxpZ2libGVcIjpmYWxzZSxcInZhdWx0YWJsZVwiOmZhbHNlfSxcImVsb1wiOntcImVsaWdpYmxlXCI6ZmFsc2UsXCJ2YXVsdGFibGVcIjp0cnVlfSxcImpjYlwiOntcImVsaWdpYmxlXCI6ZmFsc2UsXCJ2YXVsdGFibGVcIjp0cnVlfX0sXCJndWVzdEVuYWJsZWRcIjpmYWxzZX0sXCJ2ZW5tb1wiOntcImVsaWdpYmxlXCI6ZmFsc2UsXCJ2YXVsdGFibGVcIjpmYWxzZX0sXCJpdGF1XCI6e1wiZWxpZ2libGVcIjpmYWxzZX0sXCJjcmVkaXRcIjp7XCJlbGlnaWJsZVwiOmZhbHNlfSxcImFwcGxlcGF5XCI6e1wiZWxpZ2libGVcIjpmYWxzZX0sXCJzZXBhXCI6e1wiZWxpZ2libGVcIjpmYWxzZX0sXCJpZGVhbFwiOntcImVsaWdpYmxlXCI6ZmFsc2V9LFwiYmFuY29udGFjdFwiOntcImVsaWdpYmxlXCI6ZmFsc2V9LFwiZ2lyb3BheVwiOntcImVsaWdpYmxlXCI6ZmFsc2V9LFwiZXBzXCI6e1wiZWxpZ2libGVcIjpmYWxzZX0sXCJzb2ZvcnRcIjp7XCJlbGlnaWJsZVwiOmZhbHNlfSxcIm15YmFua1wiOntcImVsaWdpYmxlXCI6ZmFsc2V9LFwicDI0XCI6e1wiZWxpZ2libGVcIjpmYWxzZX0sXCJ3ZWNoYXRwYXlcIjp7XCJlbGlnaWJsZVwiOmZhbHNlfSxcInBheXVcIjp7XCJlbGlnaWJsZVwiOmZhbHNlfSxcImJsaWtcIjp7XCJlbGlnaWJsZVwiOmZhbHNlfSxcInRydXN0bHlcIjp7XCJlbGlnaWJsZVwiOmZhbHNlfSxcIm94eG9cIjp7XCJlbGlnaWJsZVwiOmZhbHNlfSxcImJvbGV0b1wiOntcImVsaWdpYmxlXCI6ZmFsc2V9LFwiYm9sZXRvYmFuY2FyaW9cIjp7XCJlbGlnaWJsZVwiOmZhbHNlfSxcIm1lcmNhZG9wYWdvXCI6e1wiZWxpZ2libGVcIjpmYWxzZX0sXCJtdWx0aWJhbmNvXCI6e1wiZWxpZ2libGVcIjpmYWxzZX0sXCJzYXRpc3BheVwiOntcImVsaWdpYmxlXCI6ZmFsc2V9LFwicGFpZHlcIjp7XCJlbGlnaWJsZVwiOmZhbHNlfX0sXCJnZXRQYWdlVXJsXCI6e1wiX190eXBlX19cIjpcImNyb3NzX2RvbWFpbl9mdW5jdGlvblwiLFwiX192YWxfX1wiOntcImlkXCI6XCJ1aWRfZWIxNzBlYTMzZF9tZHk2bXR5Nm50Z1wiLFwibmFtZVwiOlwiZ2V0UGFnZVVybFwifX0sXCJnZXRQb3B1cEJyaWRnZVwiOntcIl9fdHlwZV9fXCI6XCJjcm9zc19kb21haW5fZnVuY3Rpb25cIixcIl9fdmFsX19cIjp7XCJpZFwiOlwidWlkXzI2ZDlkZWJhYTFfbWR5Nm10eTZudGdcIixcIm5hbWVcIjpcImdldFBvcHVwQnJpZGdlXCJ9fSxcImdldFByZXJlbmRlckRldGFpbHNcIjp7XCJfX3R5cGVfX1wiOlwiY3Jvc3NfZG9tYWluX2Z1bmN0aW9uXCIsXCJfX3ZhbF9fXCI6e1wiaWRcIjpcInVpZF80NzUzNjIzOGZmX21keTZtdHk2bnRnXCIsXCJuYW1lXCI6XCJnZXRQcmVyZW5kZXJEZXRhaWxzXCJ9fSxcImdldFF1ZXJpZWRFbGlnaWJsZUZ1bmRpbmdcIjp7XCJfX3R5cGVfX1wiOlwiY3Jvc3NfZG9tYWluX2Z1bmN0aW9uXCIsXCJfX3ZhbF9fXCI6e1wiaWRcIjpcInVpZF81ZWY2NzM4ZjgxX21keTZtdHk2bnRnXCIsXCJuYW1lXCI6XCJnZXRRdWVyaWVkRWxpZ2libGVGdW5kaW5nXCJ9fSxcImhvc3RlZEJ1dHRvbklkXCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcImludGVudFwiOlwiY2FwdHVyZVwiLFwibG9jYWxlXCI6e1wiY291bnRyeVwiOlwiVVNcIixcImxhbmdcIjpcImVuXCJ9LFwibWVyY2hhbnRJRFwiOltdLFwibWVyY2hhbnRSZXF1ZXN0ZWRQb3B1cHNEaXNhYmxlZFwiOmZhbHNlLFwibm9uY2VcIjpcIlwiLFwib25Db21wbGV0ZVwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJvblNoaXBwaW5nQWRkcmVzc0NoYW5nZVwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJvblNoaXBwaW5nT3B0aW9uc0NoYW5nZVwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJwYWdlVHlwZVwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJwYXJ0bmVyQXR0cmlidXRpb25JRFwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJwYXltZW50TWV0aG9kTm9uY2VcIjp7XCJfX3R5cGVfX1wiOlwidW5kZWZpbmVkXCJ9LFwicGF5bWVudE1ldGhvZFRva2VuXCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcInBheW1lbnRSZXF1ZXN0XCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcInBsYXRmb3JtXCI6XCJkZXNrdG9wXCIsXCJyZWZlcnJlckRvbWFpblwiOlwid3d3Lmdvb2dsZS5jb21cIixcInJlbWVtYmVyXCI6e1wiX190eXBlX19cIjpcImNyb3NzX2RvbWFpbl9mdW5jdGlvblwiLFwiX192YWxfX1wiOntcImlkXCI6XCJ1aWRfODkzYjU0MzdlOF9tZHk2bXR5Nm50Z1wiLFwibmFtZVwiOlwicmVtZW1iZXJcIn19LFwicmVtZW1iZXJlZFwiOltdLFwicmVuZGVyZWRCdXR0b25zXCI6W1wicGF5cGFsXCJdLFwic2Vzc2lvbklEXCI6XCJ1aWRfMTk1ZTk5MGUwNF9tZHU2bnRjNm10eVwiLFwic2RrQ29ycmVsYXRpb25JRFwiOlwiZjU2NDkxNGY2OWM1ZVwiLFwic2RrSW50ZWdyYXRpb25Tb3VyY2VcIjpcInJlYWN0LXBheXBhbC1qc1wiLFwic2Vzc2lvblN0YXRlXCI6e1wiZ2V0XCI6e1wiX190eXBlX19cIjpcImNyb3NzX2RvbWFpbl9mdW5jdGlvblwiLFwiX192YWxfX1wiOntcImlkXCI6XCJ1aWRfYTc3ODM5ZjQ2MV9tZHk2bXR5Nm50Z1wiLFwibmFtZVwiOlwiZ2V0XCJ9fSxcInNldFwiOntcIl9fdHlwZV9fXCI6XCJjcm9zc19kb21haW5fZnVuY3Rpb25cIixcIl9fdmFsX19cIjp7XCJpZFwiOlwidWlkXzcxNzg4OGQwMmRfbWR5Nm10eTZudGdcIixcIm5hbWVcIjpcInNldFwifX19LFwic3RhZ2VIb3N0XCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcInN0b3JhZ2VJRFwiOlwidWlkXzNlYzJiODM0ZTRfbWR1Nm10cTZtemVcIixcInN0b3JhZ2VTdGF0ZVwiOntcImdldFwiOntcIl9fdHlwZV9fXCI6XCJjcm9zc19kb21haW5fZnVuY3Rpb25cIixcIl9fdmFsX19cIjp7XCJpZFwiOlwidWlkX2Q2OTAwMDM4ZWNfbWR5Nm10eTZudGdcIixcIm5hbWVcIjpcImdldFwifX0sXCJzZXRcIjp7XCJfX3R5cGVfX1wiOlwiY3Jvc3NfZG9tYWluX2Z1bmN0aW9uXCIsXCJfX3ZhbF9fXCI6e1wiaWRcIjpcInVpZF9lZWVlODVhY2I3X21keTZtdHk2bnRnXCIsXCJuYW1lXCI6XCJzZXRcIn19fSxcInN1cHBvcnRlZE5hdGl2ZUJyb3dzZXJcIjpmYWxzZSxcInN1cHBvcnRzUG9wdXBzXCI6dHJ1ZSxcInRlc3RcIjp7XCJhY3Rpb25cIjpcImNoZWNrb3V0XCJ9LFwidXNlckV4cGVyaWVuY2VGbG93XCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcInVzZXJJRFRva2VuXCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcInZhdWx0XCI6ZmFsc2UsXCJ3YWxsZXRcIjp7XCJfX3R5cGVfX1wiOlwidW5kZWZpbmVkXCJ9fSxcImV4cG9ydHNcIjp7XCJpbml0XCI6e1wiX190eXBlX19cIjpcImNyb3NzX2RvbWFpbl9mdW5jdGlvblwiLFwiX192YWxfX1wiOntcImlkXCI6XCJ1aWRfNjZiY2NiNDViZl9tZHk2bXR5Nm50Z1wiLFwibmFtZVwiOlwiaW5pdFwifX0sXCJjbG9zZVwiOntcIl9fdHlwZV9fXCI6XCJjcm9zc19kb21haW5fZnVuY3Rpb25cIixcIl9fdmFsX19cIjp7XCJpZFwiOlwidWlkXzNmMjEwM2QyNzlfbWR5Nm10eTZudGdcIixcIm5hbWVcIjpcImNsb3NlOjptZW1vaXplZFwifX0sXCJjaGVja0Nsb3NlXCI6e1wiX190eXBlX19cIjpcImNyb3NzX2RvbWFpbl9mdW5jdGlvblwiLFwiX192YWxfX1wiOntcImlkXCI6XCJ1aWRfN2E4Mzk1MjJlYl9tZHk2bXR5Nm50Z1wiLFwibmFtZVwiOlwiY2hlY2tDbG9zZVwifX0sXCJyZXNpemVcIjp7XCJfX3R5cGVfX1wiOlwiY3Jvc3NfZG9tYWluX2Z1bmN0aW9uXCIsXCJfX3ZhbF9fXCI6e1wiaWRcIjpcInVpZF9lNTc1NTRhM2RkX21keTZtdHk2bnRnXCIsXCJuYW1lXCI6XCJGblwifX0sXCJvbkVycm9yXCI6e1wiX190eXBlX19cIjpcImNyb3NzX2RvbWFpbl9mdW5jdGlvblwiLFwiX192YWxfX1wiOntcImlkXCI6XCJ1aWRfNjE1ZmU4OWY5Ml9tZHk2bXR5Nm50Z1wiLFwibmFtZVwiOlwiVW5cIn19LFwic2hvd1wiOntcIl9fdHlwZV9fXCI6XCJjcm9zc19kb21haW5fZnVuY3Rpb25cIixcIl9fdmFsX19cIjp7XCJpZFwiOlwidWlkXzYzZTcyYzM5ZjdfbWR5Nm10eTZudGdcIixcIm5hbWVcIjpcImduXCJ9fSxcImhpZGVcIjp7XCJfX3R5cGVfX1wiOlwiY3Jvc3NfZG9tYWluX2Z1bmN0aW9uXCIsXCJfX3ZhbF9fXCI6e1wiaWRcIjpcInVpZF9hNWM3N2MzYTNhX21keTZtdHk2bnRnXCIsXCJuYW1lXCI6XCJ2blwifX0sXCJleHBvcnRcIjp7XCJfX3R5cGVfX1wiOlwiY3Jvc3NfZG9tYWluX2Z1bmN0aW9uXCIsXCJfX3ZhbF9fXCI6e1wiaWRcIjpcInVpZF8yYmNjMzgxZTFhX21keTZtdHk2bnRnXCIsXCJuYW1lXCI6XCJXblwifX19fSJ9fQ__"
+                          title="PayPal"
+                          allowpaymentrequest="allowpaymentrequest"
+                          scrolling="no"
+                          id="jsx-iframe-793cf47ea8"
+                          class="component-frame visible"
+                          style="background-color: transparent; border: none"
+                        ></iframe>
+                        <div id="smart-menu" class="smart-menu"></div>
+                        <div id="installments-modal" class="installments-modal"></div>
+                        <iframe
+                          name="__detect_close_uid_32311d54ee_mdy6mty6ntg__"
+                          style="display: none"
+                        ></iframe>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>   
+        </li>
+      </ul>
+    </section>
+  </body>
+</html>

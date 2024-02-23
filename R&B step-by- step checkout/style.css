@@ -1,0 +1,16 @@
+#step-indicator{
+    font-size: 26px;
+    text-align: left;
+    line-height:2;
+    padding:10px;
+    margin: 10px;
+    font-family:Playfair Display,Georgia,AppleSDGothicNeo-Regular,serif;
+}
+
+.skip-button{
+    align-items: left;
+    border-radius: 5px;
+    width: 10px;
+    font-size: 20px;
+    background-color:#78d6ff;
+}
